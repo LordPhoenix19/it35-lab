@@ -18,6 +18,8 @@ import {
   import { Redirect, Route } from 'react-router';
   import Home from './Home';
   import About from './About';
+  import Details from './Details';
+
     const Menu: React.FC = () => {
       const path = [
           {name:'Home', url: '/it35-lab/app/Home', icon: homeOutline},
@@ -52,12 +54,13 @@ import {
                         Logout
                         </IonButton>
 
-                        
+
                 </IonContent>
             </IonMenu>
             
             <IonRouterOutlet id="main">
                 <Route exact path="/it35-lab/app/Home" component={Home} />
+                <Route exact path="/it35-lab/app/home/details" component={Details} />
                 <Route exact path="/it35-lab/app/About" component={About} />
                 <Route exact path="/it35-lab/app">
                     <Redirect to="/it35-lab/app/Home"/>
